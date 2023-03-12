@@ -1,1 +1,1 @@
-# documentation
+# Symplator app documentation
