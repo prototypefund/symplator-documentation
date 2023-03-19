@@ -1,37 +1,59 @@
+== Symptom
 
-Symptom.schema = {
-  name: 'Symptom',
-  primaryKey: 'id',
-  properties: {
-    id: 'int',
-    bodyParts: 'int?[]',
-    diseases: 'int?[]',
-    translations: 'SymptomTranslation[]',
-  },
-};
+This data model includes names and translations of all symptoms. It has one sub data model named as *Symptom Translation* which is a logical representation of  symptom translation in one language. 
 
-TRANSLATOR DATA MODEL
+[cols="1,1,1,1"]
+|===
+| Field Name | Type | Example | Description
 
-Symptom
-{
-id: 1
-body_parts : [1]
-diseases: [1, 4, 5]
-tr: {
-name:  “Baş ağrısı”
-detail: “Auralı, sızlamalı, zonklayan şekilde görülebilir.”
-tags: [“Kafa ağrısı”, “Alın, şakak ağrısı”]
-     }
-eng: {
-name: “Headache”
-detail: ‘’It can be seen with aura, tingling, and throbbing.”
-tags: [“Head pressure”, “Head pain”]
-        }
-ger: {
-name: “KopfSchmerz”
-detail: “Es kann mit Aura, Kribbeln und Pochen gesehen werden.”
-tags: [“Kopfweh”]
-        } 
-}
+| id
+| Integer
+| 1
+| Unique id of symptom
 
+| body_parts
+| Integer Array
+| [1, 4, 5]
+| Id list of body parts on which the symptom can be observed.
 
+| diseases
+| Integer Array
+| [2, 5, 8]
+| Id list of diseases on which the symptom can be observed.
+
+| translations
+| SymptomTranslation Array
+| [{language: "tr", name: “Baş ağrısı”detail: “Auralı, sızlamalı, zonklayan şekilde görülebilir.”, tags: [“Kafa ağrısı”, “Alın, şakak ağrısı”]},
+{language: "eng", name: “Headache”, detail: ‘’It can be seen with aura, tingling, and throbbing.”, tags: [“Head pressure”, “Head pain”]},
+{language: "ger", name: “KopfSchmerz”, detail: “Es kann mit Aura, Kribbeln und Pochen gesehen werden.”, tags: [“Kopfweh”]} ]
+| Translations of symptom in supported languages
+|===
+
+*Symptom Translation*
+
+Sub data model object of *Symptom* table 
+
+[cols="1,1,1,1"]
+|===
+| Field Name | Type | Example | Description
+
+| language
+| String
+| "ger"
+| Target language code
+
+| name
+| String
+| "KopfSchmerz"
+| Name of the symptom in the target language
+
+| detail
+| String
+| 2Es kann mit Aura, Kribbeln und Pochen gesehen werden.
+| Description of the symptom in the target language."
+
+| detail
+| String Array
+| [“Kopfweh”]
+| Other search keywords that describes the symptom
+|===
