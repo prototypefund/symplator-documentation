@@ -18,7 +18,7 @@ This data model includes names and translations of all body parts and it is refe
 
 | translations
 | BodyPartTranslation Array
-| [tr : { name: “Baş” }, eng: { name “Head” }, ger: { name: “Kopf” }]
+| [{language: "tr", name: “Baş” }, {language:"eng", name “Head” }, {language: "ger", name: “Kopf” }]
 | Translations of body part in supported languages
 |===
 
@@ -32,11 +32,11 @@ Sub data model object of *Body Part* table
 
 | language
 | String
-| ger
+| "ger"
 | Target language code
 
 | name
 | String
-| Kopf
+| "Kopf"
 | Name of the body part in the target language
 |===

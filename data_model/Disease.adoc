@@ -13,7 +13,7 @@ This data model includes names and translations of diseases and it is referenced
 
 | translations
 | DiseaseTranslation Array
-| [tr : { name: Migren }, eng: { name Migraine }, ger: { name: “Migräine” }]
+| [{language: "tr", name: "Migren" }, {language: "eng", name "Migraine" }, {langauge: "ger", name: “Migräine” }]
 | Translations of disease in supported languages
 |===
 
@@ -27,11 +27,11 @@ Sub data model object of *Disease* table
 
 | language
 | String
-| ger
+| "ger"
 | Target language code
 
 | name
 | String
-| Migräine
+| "Migräine"
 | Name of the disease in the target language
 |===
