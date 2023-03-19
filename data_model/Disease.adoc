@@ -1,6 +1,6 @@
 == Disease
 
-This data model includes names and translations of diseases and it is referenced by *Symptom* model. It has one sub data model named as *Disease Translation* which is a logical representation of the disease translation in one language.
+This data model includes names and translations of diseases and it is referenced by *Symptom* model. It has one sub data model named as *Disease Translation* which is a logical representation of disease translation in one language.
 
 [cols="1,1,1,1"]
 |===

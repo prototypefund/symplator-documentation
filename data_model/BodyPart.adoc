@@ -1,6 +1,6 @@
 == Body Part
 
-This data model includes names and translations of all body parts and it is referenced by *Symptom* model. It has one sub data model named as *Body Part Translation* which is a logical representation of the body part translation in one language.
+This data model includes names and translations of all body parts and it is referenced by *Symptom* model. It has one sub data model named as *Body Part Translation* which is a logical representation of body part translation in one language.
 
 [cols="1,1,1,1"]
 |===
