@@ -1,0 +1,37 @@
+
+Symptom.schema = {
+  name: 'Symptom',
+  primaryKey: 'id',
+  properties: {
+    id: 'int',
+    bodyParts: 'int?[]',
+    diseases: 'int?[]',
+    translations: 'SymptomTranslation[]',
+  },
+};
+
+TRANSLATOR DATA MODEL
+
+Symptom
+{
+id: 1
+body_parts : [1]
+diseases: [1, 4, 5]
+tr: {
+name:  “Baş ağrısı”
+detail: “Auralı, sızlamalı, zonklayan şekilde görülebilir.”
+tags: [“Kafa ağrısı”, “Alın, şakak ağrısı”]
+     }
+eng: {
+name: “Headache”
+detail: ‘’It can be seen with aura, tingling, and throbbing.”
+tags: [“Head pressure”, “Head pain”]
+        }
+ger: {
+name: “KopfSchmerz”
+detail: “Es kann mit Aura, Kribbeln und Pochen gesehen werden.”
+tags: [“Kopfweh”]
+        } 
+}
+
+

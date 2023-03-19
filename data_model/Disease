@@ -1,4 +1,4 @@
-== Body Part
+== Disease
 
 This data model includes names and translations of all body parts and it is referenced by *Symptom* model. It has one sub data model named as *Body Part Translation* which is a logical representation of the body part translation in one language.
 
@@ -20,23 +20,4 @@ This data model includes names and translations of all body parts and it is refe
 | BodyPartTranslation Array
 | [tr : { name: “Baş” }, eng: { name “Head” }, ger: { name: “Kopf” }]
 | Translations of body part in supported languages
-|===
-
-*Body Part Translation*
-
-Sub data model object of *Body Part* table 
-
-[cols="1,1,1,1"]
-|===
-| Field Name | Type | Example | Description
-
-| language
-| String
-| ger
-| Target language code
-
-| name
-| String
-| Kopf
-| Name of the body part in the target language
 |===
