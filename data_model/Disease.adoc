@@ -1,0 +1,37 @@
+== Disease
+
+This data model includes names and translations of diseases and it is referenced by *Symptom* model. It has one sub data model named as *Disease Translation* which is a logical representation of the disease translation in one language.
+
+[cols="1,1,1,1"]
+|===
+| Field Name | Type | Example | Description
+
+| id
+| Integer
+| 1
+| Unique id of disease
+
+| translations
+| DiseaseTranslation Array
+| [tr : { name: Migren }, eng: { name Migraine }, ger: { name: “Migräine” }]
+| Translations of disease in supported languages
+|===
+
+*Disease Translation*
+
+Sub data model object of *Disease* table 
+
+[cols="1,1,1,1"]
+|===
+| Field Name | Type | Example | Description
+
+| language
+| String
+| ger
+| Target language code
+
+| name
+| String
+| Migräine
+| Name of the disease in the target language
+|===
