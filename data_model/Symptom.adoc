@@ -52,7 +52,7 @@ Sub data model object of *Symptom* table
 | 2Es kann mit Aura, Kribbeln und Pochen gesehen werden.
 | Description of the symptom in the target language."
 
-| detail
+| tags
 | String Array
 | [“Kopfweh”]
 | Other search keywords that describes the symptom
